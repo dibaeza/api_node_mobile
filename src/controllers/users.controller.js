@@ -12,7 +12,18 @@ const getUsers = async(req , res)=>{
     }  
 };
 
+const getMessage = async(req , res)=>{
+    try {
+        const result = "Hola mundo";
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }  
+};
+
 
 export const methods = {
-    getUsers
+    getUsers,
+    getMessage
 }
